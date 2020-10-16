@@ -1,0 +1,270 @@
+swagger: "2.0"
+info:
+  description: "Example API specification for [article-navigator](https://github.com/janjagusch/article-navigator)."
+  version: "1.0.0"
+  title: "Article Navigator"
+  contact:
+    email: "jan.jagusch@gmail.com"
+host: "localhost"
+basePath: "/v1"
+schemes:
+  - "http"
+paths:
+  /supermarkets:
+    get:
+      summary: "Lists all supermarkets"
+      description: "Returns an array of supermarkets"
+      operationId: "app.get_supermarkets"
+      produces:
+        - "application/json"
+      responses:
+        "200":
+          description: "Successful operation"
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Supermarket"
+  /supermarkets/{supermarket_id}:
+    get:
+      summary: "Finds supermarket"
+      description: "Returns a single supermarket"
+      operationId: "app.get_supermarket"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "supermarket_id"
+          in: "path"
+          description: "ID of supermarket"
+          required: true
+          type: "integer"
+      responses:
+        "200":
+          description: "Successful operation"
+          schema:
+            $ref: "#/definitions/Supermarket"
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Supermarket not found"
+  /supermarkets/{supermarket_id}/articles:
+    get:
+      summary: "Finds all articles in supermarket"
+      description: "Returns an array of articles"
+      operationId: "app.get_supermarket_articles"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "supermarket_id"
+          in: "path"
+          description: "ID of supermarket"
+          required: true
+          type: "integer"
+      responses:
+        "200":
+          description: "Successful operation"
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Article"
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Supermarket not found"
+  /supermarkets/{supermarket_id}/sections/{section_id}:
+    get:
+      summary: "Finds a section in a supermarket"
+      description: "Returns a single section"
+      operationId: "app.get_supermarket_section"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "supermarket_id"
+          in: "path"
+          description: "ID of supermarket"
+          required: true
+          type: "integer"
+        - name: "section_id"
+          in: "path"
+          description: "ID of the section"
+          required: true
+          type: "integer"
+      responses:
+        "200":
+          description: "Successful operation"
+          schema:
+            $ref: "#/definitions/SupermarketSection"
+  /articles/{article_id}:
+    get:
+      summary: "Finds article"
+      description: "Returns a single article"
+      operationId: "app.get_article"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "article_id"
+          in: "path"
+          description: "ID of article to return"
+          required: true
+          type: "integer"
+      responses:
+        "200":
+          description: "Successful operation"
+          schema:
+            $ref: "#/definitions/Article"
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Article not found"
+  /articles:
+    get:
+      summary: "Lists all articles"
+      description: "Returns an array of articles"
+      operationId: "app.get_articles"
+      produces:
+        - "application/json"
+      responses:
+        "200":
+          description: "Successful operation"
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Article"
+  /supermarkets/{supermarket_id}/articles/{article_id}/section:
+    get:
+      summary: "Find section of article in supermarket"
+      description: "Returns supermarket section of article in supermarket"
+      operationId: "app.get_supermarket_article_section"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "supermarket_id"
+          in: "path"
+          description: "ID of the supermarket"
+          required: True
+          type: "integer"
+        - name: "article_id"
+          in: "path"
+          description: "ID of the article"
+          required: True
+          type: "integer"
+      responses:
+        "200":
+          description: "Successful operation"
+          schema:
+            $ref: "#/definitions/SupermarketSection"
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Article not found"
+  /supermarkets/{supermarket_id}/shortest_path:
+    get:
+      summary: "Finds the shortest path between sections in a supermarket"
+      description: "Returns an array of supermarket sections"
+      operationId: "app.get_supermarket_shortest_path"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "supermarket_id"
+          in: "path"
+          description: "ID of the supermarket"
+          required: True
+          type: "integer"
+        - name: "from_section"
+          in: "query"
+          description: "ID of the section you start from"
+          required: True
+          type: integer
+        - name: "to_section"
+          in: "query"
+          description: "ID of the section you go to"
+          required: True
+          type: integer
+      responses:
+        "200":
+          description: "Successful operation"
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/SupermarketSection"
+  /supermarkets/{supermarket_id}/shortest_tour:
+    get:
+      summary: "Finds the shortest tour to visit selected sections in a supermarket"
+      description: "Returns an array of supermarket sections"
+      operationId: "app.get_supermarket_shortest_tour"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "supermarket_id"
+          in: "path"
+          description: "ID of the supermarket"
+          required: True
+          type: "integer"
+        - name: "visit_sections"
+          in: "query"
+          description: "Array of section IDs you want to visit"
+          required: True
+          type: "array"
+          items:
+            type: "integer"
+      responses:
+        "200":
+          description: "Successful operation"
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/SupermarketSection"
+definitions:
+  SupermarketSection:
+    type: "object"
+    required:
+      - id
+      - location
+      - type
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      location:
+        type: object
+        required:
+          - x
+          - y
+        properties:
+          x:
+            type: integer
+          y:
+            type: integer
+      type:
+        type: "string"
+        enum: ["entrance", "isle", "checkout"]
+  Supermarket:
+    type: "object"
+    required:
+      - id
+      - name
+      - sections
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      name:
+        type: "string"
+        example: "Lidl Heidelberg"
+      sections:
+        type: "array"
+        items:
+          $ref: "#/definitions/SupermarketSection"
+  Article:
+    type: "object"
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+        example: "Nutella"
+      imageUrl:
+        type: string
+        format: url
