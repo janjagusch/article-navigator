@@ -1,3 +1,5 @@
+import os
+import json
 import random
 import pickle
 import networkx as nx
@@ -90,3 +92,18 @@ def create_supermarket(market_id):
 
     return graph, sections, super_market
 
+def save_supermarket(market_id):
+    '''
+    Function that saves a supermarket as a graph, its sections and its definition to file.
+    '''
+
+    graph, sections, super_market = create_supermarket(market_id)
+
+    with open('./supermarkets.yaml'), 'w') as f:
+        f.write(json.dumps(super_market))
+
+    with open('./supermarket_article_sections.yaml', 'w') as f:
+        f.write(json.dumps(sections))
+
+    with open('./graph.yaml', 'wb') as f:
+        f.write(pickle.dumps(graph))
