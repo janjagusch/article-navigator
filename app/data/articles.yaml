@@ -1,1 +1,474 @@
-{ "7450302103223893356": { "id": 0, "name": "domestic eggs" }, "-7614459584044367785": { "id": 1, "name": "chocolate" }, "-5108353717182559676": { "id": 2, "name": "bottled beer" }, "-864306461703794414": { "id": 3, "name": "whole milk" }, "7989865973693436599": { "id": 4, "name": "cookware" }, "5857581591188697818": { "id": 5, "name": "canned beer" }, "1860117307039676360": { "id": 6, "name": "shopping bags" }, "-5940082408428730570": { "id": 7, "name": "soda" }, "-3202999978703178013": { "id": 8, "name": "napkins" }, "-8082749341515239912": { "id": 9, "name": "bottled water" }, "5209661133988177007": { "id": 10, "name": "hamburger meat" }, "-7221679560679877652": { "id": 11, "name": "whipped/sour cream" }, "-5157413169367847226": { "id": 12, "name": "dishes" }, "-7780616964345454001": { "id": 13, "name": "oil" }, "-454811311731142948": { "id": 14, "name": "yogurt" }, "3890078187460733752": { "id": 15, "name": "long life bakery product" }, "4565365416944739732": { "id": 16, "name": "rolls/buns" }, "4263951287383842950": { "id": 17, "name": "tropical fruit" }, "-728292992294061675": { "id": 18, "name": "coffee" }, "-8350501927249140341": { "id": 19, "name": "ice cream" }, "-1225191744277523283": { "id": 20, "name": "newspapers" }, "2804644750936965049": { "id": 21, "name": "white wine" }, "2385561347291401756": { "id": 22, "name": "misc. beverages" }, "3318124595835092819": { "id": 23, "name": "other vegetables" }, "8928225646745272455": { "id": 24, "name": "photo/film" }, "7381584425885813458": { "id": 25, "name": "specialty bar" }, "-8933436639511077014": { "id": 26, "name": "pip fruit" }, "7379200872474588685": { "id": 27, "name": "frozen vegetables" }, "2199565563060691654": { "id": 28, "name": "fruit/vegetable juice" }, "-7939879610735234222": { "id": 29, "name": "pasta" }, "-2480135411596573910": { "id": 30, "name": "liver loaf" }, "8678522709565150240": { "id": 31, "name": "beverages" }, "8062113899622389857": { "id": 32, "name": "butter milk" }, "-3171469918141516116": { "id": 33, "name": "root vegetables" }, "1621003225474615895": { "id": 34, "name": "hard cheese" }, "3546306269546465008": { "id": 35, "name": "abrasive cleaner" }, "5374340494755778684": { "id": 36, "name": "frankfurter" }, "2106649506765599791": { "id": 37, "name": "frozen meals" }, "-8236301944251315420": { "id": 38, "name": "citrus fruit" }, "-3887698012725759448": { "id": 39, "name": "beef" }, "-4569148097256872014": { "id": 40, "name": "sparkling wine" }, "9026979425615312879": { "id": 41, "name": "chocolate marshmallow" }, "2796845712006659514": { "id": 42, "name": "cleaner" }, "-8325188128188972870": { "id": 43, "name": "berries" }, "-1570612601251527991": { "id": 44, "name": "finished products" }, "8414469606642009528": { "id": 45, "name": "waffles" }, "-458391788255210997": { "id": 46, "name": "candy" }, "4853076604577266167": { "id": 47, "name": "red/blush wine" }, "-7999193893179415268": { "id": 48, "name": "margarine" }, "8916289379276215652": { "id": 49, "name": "flower soil/fertilizer" }, "8309291282359529": { "id": 50, "name": "turkey" }, "7150266908001313795": { "id": 51, "name": "brown bread" }, "8282242650446332280": { "id": 52, "name": "bags" }, "822029062472395897": { "id": 53, "name": "pastry" }, "1099052864425767853": { "id": 54, "name": "Instant food products" }, "-5359255660356809189": { "id": 55, "name": "curd" }, "6168188843417228478": { "id": 56, "name": "UHT-milk" }, "2958191188114077605": { "id": 57, "name": "specialty chocolate" }, "52522507875917942": { "id": 58, "name": "flour" }, "5520883141260018892": { "id": 59, "name": "white bread" }, "-2687750974431231516": { "id": 60, "name": "light bulbs" }, "6556675426712459236": { "id": 61, "name": "detergent" }, "-6423225200504669443": { "id": 62, "name": "frozen dessert" }, "4237643244107538441": { "id": 63, "name": "pork" }, "80134885238286006": { "id": 64, "name": "sausage" }, "2437716785083874103": { "id": 65, "name": "salty snack" }, "-7084872860733742670": { "id": 66, "name": "house keeping products" }, "-476883788519684668": { "id": 67, "name": "male cosmetics" }, "2997650456475666104": { "id": 68, "name": "packaged fruit/vegetables" }, "-8059859055097775487": { "id": 69, "name": "butter" }, "1160859632435715968": { "id": 70, "name": "liqueur" }, "-4206920043273340098": { "id": 71, "name": "chewing gum" }, "-327094523492384488": { "id": 72, "name": "liquor" }, "-5755910154788688898": { "id": 73, "name": "herbs" }, "7604086522082679721": { "id": 74, "name": "potted plants" }, "3384103820385971600": { "id": 75, "name": "hygiene articles" }, "8315387702084856338": { "id": 76, "name": "potato products" }, "-3812500464091427041": { "id": 77, "name": "seasonal products" }, "-5845122698344917040": { "id": 78, "name": "sugar" }, "-2347298617750403242": { "id": 79, "name": "soft cheese" }, "-7134929775060919767": { "id": 80, "name": "sliced cheese" }, "-8496480573507965950": { "id": 81, "name": "salt" }, "-130907730642530314": { "id": 82, "name": "frozen potato products" }, "-4839995355886454772": { "id": 83, "name": "brandy" }, "4410865398127504760": { "id": 84, "name": "dish cleaner" }, "2028968236956222058": { "id": 85, "name": "syrup" }, "4937525813899354122": { "id": 86, "name": "canned vegetables" }, "-1725495123386206621": { "id": 87, "name": "processed cheese" }, "-9186961669420476993": { "id": 88, "name": "ketchup" }, "5286544713497300270": { "id": 89, "name": "cream cheese" }, "7993415069596096633": { "id": 90, "name": "frozen fish" }, "722720409181091665": { "id": 91, "name": "chicken" }, "-1620033477460761705": { "id": 92, "name": "pet care" }, "-8310368569566523155": { "id": 93, "name": "spread cheese" }, "-4762071473735439869": { "id": 94, "name": "kitchen utensil" }, "823727854941771313": { "id": 95, "name": "semi-finished bread" }, "-7230290429619509611": { "id": 96, "name": "rum" }, "1358070505966684962": { "id": 97, "name": "zwieback" }, "-5107800590556071090": { "id": 98, "name": "prosecco" }, "2266859100854467015": { "id": 99, "name": "sweet spreads" }, "2153463820343753891": { "id": 100, "name": "spices" }, "-8676080799769886966": { "id": 101, "name": "baby cosmetics" }, "-3366338996469817124": { "id": 102, "name": "popcorn" }, "4169514305782089036": { "id": 103, "name": "dog food" }, "-2093218838399981165": { "id": 104, "name": "meat" }, "-1696869992044677199": { "id": 105, "name": "female sanitary products" }, "-8851024282066519575": { "id": 106, "name": "baking powder" }, "-6910013679900073005": { "id": 107, "name": "decalcifier" }, "-8907451166313934903": { "id": 108, "name": "grapes" }, "-7558890871247197543": { "id": 109, "name": "ham" }, "-1384529789225292555": { "id": 110, "name": "candles" }, "-1274254664414678266": { "id": 111, "name": "condensed milk" }, "-517958551718501947": { "id": 112, "name": "instant coffee" }, "4256088578994058459": { "id": 113, "name": "cling film/bags" }, "3147162098712655383": { "id": 114, "name": "roll products" }, "6070872236428505203": { "id": 115, "name": "cat food" }, "1040108012067431427": { "id": 116, "name": "mayonnaise" }, "2948961773796860306": { "id": 117, "name": "kitchen towels" }, "8311506817327418565": { "id": 118, "name": "artif. sweetener" }, "-2957568686910504015": { "id": 119, "name": "cooking chocolate" }, "-3356278066578523113": { "id": 120, "name": "dessert" }, "4407479281330067507": { "id": 121, "name": "canned fruit" }, "-529747427576929858": { "id": 122, "name": "softener" }, "-7440290925581684023": { "id": 123, "name": "mustard" }, "6735180137406651180": { "id": 124, "name": "nuts/prunes" }, "-5051464835361800776": { "id": 125, "name": "onions" }, "7811609592468188889": { "id": 126, "name": "curd cheese" }, "4239975367878553612": { "id": 127, "name": "bathroom cleaner" }, "-8895053117579309353": { "id": 128, "name": "nut snack" }, "-72069030023813182": { "id": 129, "name": "liquor (appetizer)" }, "-469364208729242608": { "id": 130, "name": "soap" }, "-450797295421488345": { "id": 131, "name": "frozen chicken" }, "-8209663048685654728": { "id": 132, "name": "rubbing alcohol" }, "-49507399566855520": { "id": 133, "name": "whisky" }, "216169849396930049": { "id": 134, "name": "cereals" }, "6441650011189976910": { "id": 135, "name": "frozen fruits" }, "6999097088655624511": { "id": 136, "name": "flower (seeds)" }, "4101183715260360721": { "id": 137, "name": "cocoa drinks" }, "2347093673413956896": { "id": 138, "name": "hair spray" }, "-58865056896392131": { "id": 139, "name": "soups" }, "-4004374820286184275": { "id": 140, "name": "canned fish" }, "-5457591411284252949": { "id": 141, "name": "specialty cheese" }, "4824628615048005437": { "id": 142, "name": "cream" }, "6187310374175300063": { "id": 143, "name": "pickled vegetables" }, "8191533227526262349": { "id": 144, "name": "vinegar" }, "6116363265047532869": { "id": 145, "name": "fish" }, "-4491716396786345325": { "id": 146, "name": "meat spreads" }, "-2201194900621865266": { "id": 147, "name": "skin care" }, "1408830504870823883": { "id": 148, "name": "sauces" }, "3348525493284161298": { "id": 149, "name": "organic sausage" }, "-5966612683050092167": { "id": 150, "name": "honey" }, "-1156827285196973017": { "id": 151, "name": "jam" }, "-2931769084269155555": { "id": 152, "name": "dental care" }, "810693601870332928": { "id": 153, "name": "cake bar" }, "-2411610215523116190": { "id": 154, "name": "snack products" }, "-8954583322661123714": { "id": 155, "name": "tidbits" }, "-7220421255500648050": { "id": 156, "name": "specialty fat" }, "-5704977167198020276": { "id": 157, "name": "organic products" } }
+-9179634696820256310:
+  id: 70
+  name: liqueur
+-8961781229611700744:
+  id: 94
+  name: kitchen utensil
+-8744341001806988688:
+  id: 126
+  name: curd cheese
+-8654239651563263678:
+  id: 146
+  name: meat spreads
+-8616713890205769431:
+  id: 51
+  name: brown bread
+-8574469921669136702:
+  id: 84
+  name: dish cleaner
+-8506810590571425590:
+  id: 147
+  name: skin care
+-8122952233570060446:
+  id: 67
+  name: male cosmetics
+-8028589926215902520:
+  id: 0
+  name: domestic eggs
+-7951770339345331762:
+  id: 122
+  name: softener
+-7921791793597752017:
+  id: 71
+  name: chewing gum
+-7520055928918560594:
+  id: 92
+  name: pet care
+-7318277504623138127:
+  id: 20
+  name: newspapers
+-7248522345054882921:
+  id: 10
+  name: hamburger meat
+-7234233991289301059:
+  id: 93
+  name: spread cheese
+-6908223026282048981:
+  id: 134
+  name: cereals
+-6872271117612594040:
+  id: 140
+  name: canned fish
+-6863234679530828367:
+  id: 150
+  name: honey
+-6831341494142361229:
+  id: 33
+  name: root vegetables
+-6811923697790698977:
+  id: 153
+  name: cake bar
+-6808685289377299644:
+  id: 151
+  name: jam
+-6770721247422990548:
+  id: 66
+  name: house keeping products
+-6669407323822041587:
+  id: 40
+  name: sparkling wine
+-6585456236818675070:
+  id: 30
+  name: liver loaf
+-6355126203902534070:
+  id: 81
+  name: salt
+-6310898788381048046:
+  id: 101
+  name: baby cosmetics
+-6297693727120848215:
+  id: 95
+  name: semi-finished bread
+-6157303100114159058:
+  id: 111
+  name: condensed milk
+-6000549631364623296:
+  id: 4
+  name: cookware
+-5792270941612451295:
+  id: 63
+  name: pork
+-5286599307369038804:
+  id: 23
+  name: other vegetables
+-5281149901788574410:
+  id: 133
+  name: whisky
+-5113248665585163861:
+  id: 37
+  name: frozen meals
+-4960224690759663149:
+  id: 69
+  name: butter
+-4938547219655545806:
+  id: 99
+  name: sweet spreads
+-4839815642443513928:
+  id: 100
+  name: spices
+-4707893383043069553:
+  id: 136
+  name: flower (seeds)
+-4637947041770048536:
+  id: 131
+  name: frozen chicken
+-4430592635052275053:
+  id: 31
+  name: beverages
+-4376981971110637897:
+  id: 120
+  name: dessert
+-4340657519865743831:
+  id: 125
+  name: onions
+-4190804386081833223:
+  id: 42
+  name: cleaner
+-3905073219981012493:
+  id: 154
+  name: snack products
+-3877875689867922143:
+  id: 54
+  name: Instant food products
+-3835267744235333056:
+  id: 118
+  name: artif. sweetener
+-3795623947657995678:
+  id: 73
+  name: herbs
+-3774297368563932497:
+  id: 90
+  name: frozen fish
+-3768478745487407170:
+  id: 45
+  name: waffles
+-3745235428802168996:
+  id: 98
+  name: prosecco
+-3372115384758911511:
+  id: 102
+  name: popcorn
+-3205769676955135864:
+  id: 128
+  name: nut snack
+-3083335384381928568:
+  id: 19
+  name: ice cream
+-3016691674629345943:
+  id: 60
+  name: light bulbs
+-2945659028189402761:
+  id: 13
+  name: oil
+-2832436819272127039:
+  id: 68
+  name: packaged fruit/vegetables
+-2824988898544404610:
+  id: 108
+  name: grapes
+-2710688537044928817:
+  id: 1
+  name: chocolate
+-2611622152008871063:
+  id: 104
+  name: meat
+-2574371117827599727:
+  id: 96
+  name: rum
+-2509280981887281105:
+  id: 138
+  name: hair spray
+-2384859225509069743:
+  id: 29
+  name: pasta
+-2355158162758597432:
+  id: 144
+  name: vinegar
+-2327504717370145770:
+  id: 80
+  name: sliced cheese
+-2318208829543293508:
+  id: 132
+  name: rubbing alcohol
+-2122061081117651669:
+  id: 141
+  name: specialty cheese
+-2058308866642284871:
+  id: 75
+  name: hygiene articles
+-1975757126636838921:
+  id: 11
+  name: whipped/sour cream
+-1950734522234076787:
+  id: 112
+  name: instant coffee
+-1914560570320503567:
+  id: 103
+  name: dog food
+-1718908161852974756:
+  id: 59
+  name: white bread
+-1673042146870293400:
+  id: 74
+  name: potted plants
+-1644434529016980918:
+  id: 17
+  name: tropical fruit
+-1622915554553051195:
+  id: 109
+  name: ham
+-1582715258481324865:
+  id: 46
+  name: candy
+-1562263000993467765:
+  id: 50
+  name: turkey
+-1186824866382425085:
+  id: 107
+  name: decalcifier
+-1042197054961375865:
+  id: 65
+  name: salty snack
+-698153006862786387:
+  id: 7
+  name: soda
+-600690496489005820:
+  id: 145
+  name: fish
+-540556074121574938:
+  id: 106
+  name: baking powder
+-479005740210507224:
+  id: 36
+  name: frankfurter
+-70683007015681958:
+  id: 52
+  name: bags
+145388939307967481:
+  id: 83
+  name: brandy
+291665222755782592:
+  id: 110
+  name: candles
+302891475092322536:
+  id: 39
+  name: beef
+400654700713749574:
+  id: 116
+  name: mayonnaise
+437299211990586018:
+  id: 57
+  name: specialty chocolate
+780391553379226329:
+  id: 121
+  name: canned fruit
+822816552260859176:
+  id: 16
+  name: rolls/buns
+845829477390578378:
+  id: 53
+  name: pastry
+907027676606425862:
+  id: 2
+  name: bottled beer
+1073706058415813141:
+  id: 156
+  name: specialty fat
+1399679806497529508:
+  id: 3
+  name: whole milk
+1634159078337834412:
+  id: 127
+  name: bathroom cleaner
+1829335104076223748:
+  id: 105
+  name: female sanitary products
+2006269709230021276:
+  id: 28
+  name: fruit/vegetable juice
+2114043478520810275:
+  id: 15
+  name: long life bakery product
+2197014175811742749:
+  id: 22
+  name: misc. beverages
+2260521822203138141:
+  id: 148
+  name: sauces
+2327641095528743797:
+  id: 130
+  name: soap
+2342597867289490809:
+  id: 82
+  name: frozen potato products
+2787105677566980589:
+  id: 26
+  name: pip fruit
+3081264671136591878:
+  id: 72
+  name: liquor
+3199333987434831119:
+  id: 142
+  name: cream
+3683474283257152956:
+  id: 155
+  name: tidbits
+3790261711444363917:
+  id: 8
+  name: napkins
+3805442876207317717:
+  id: 97
+  name: zwieback
+3879637702938469559:
+  id: 62
+  name: frozen dessert
+3926968914051819476:
+  id: 61
+  name: detergent
+3968750787705012877:
+  id: 14
+  name: yogurt
+4156476288475343335:
+  id: 129
+  name: liquor (appetizer)
+4278578386234155163:
+  id: 152
+  name: dental care
+4568258384798379218:
+  id: 56
+  name: UHT-milk
+4696435521325788271:
+  id: 43
+  name: berries
+4888374192144988851:
+  id: 157
+  name: organic products
+4913501920895798701:
+  id: 44
+  name: finished products
+4938357451042995761:
+  id: 24
+  name: photo/film
+5126848920348522444:
+  id: 9
+  name: bottled water
+5129457416023038451:
+  id: 55
+  name: curd
+5244871105368064971:
+  id: 48
+  name: margarine
+5263713420679462593:
+  id: 32
+  name: butter milk
+5522296193903922457:
+  id: 5
+  name: canned beer
+5525401376459249870:
+  id: 115
+  name: cat food
+5654929439662959342:
+  id: 78
+  name: sugar
+5656497880825531149:
+  id: 117
+  name: kitchen towels
+5733314816240435357:
+  id: 18
+  name: coffee
+5916765279173672024:
+  id: 77
+  name: seasonal products
+5963221674534721242:
+  id: 86
+  name: canned vegetables
+6130879919591557497:
+  id: 135
+  name: frozen fruits
+6192922772579832840:
+  id: 143
+  name: pickled vegetables
+6304360167940718251:
+  id: 88
+  name: ketchup
+6415053437349517603:
+  id: 139
+  name: soups
+6656990699385139953:
+  id: 124
+  name: nuts/prunes
+6704261419145594348:
+  id: 64
+  name: sausage
+6718722110164236910:
+  id: 114
+  name: roll products
+6841119029841876371:
+  id: 27
+  name: frozen vegetables
+6870251675633293457:
+  id: 149
+  name: organic sausage
+6996485628346528663:
+  id: 87
+  name: processed cheese
+7016096152428037671:
+  id: 12
+  name: dishes
+7058915974512727198:
+  id: 91
+  name: chicken
+7091024626998689449:
+  id: 79
+  name: soft cheese
+7112496568484846109:
+  id: 113
+  name: cling film/bags
+7197975827024380092:
+  id: 41
+  name: chocolate marshmallow
+7750529304774823984:
+  id: 89
+  name: cream cheese
+7926443885343383263:
+  id: 76
+  name: potato products
+7946831933457478737:
+  id: 123
+  name: mustard
+8135293015010732075:
+  id: 58
+  name: flour
+8301201878225409485:
+  id: 34
+  name: hard cheese
+8363275962356823697:
+  id: 38
+  name: citrus fruit
+8412013247405644684:
+  id: 25
+  name: specialty bar
+8483361082004847873:
+  id: 6
+  name: shopping bags
+8575106889866747199:
+  id: 35
+  name: abrasive cleaner
+8693387357532658596:
+  id: 21
+  name: white wine
+8762029759456670920:
+  id: 85
+  name: syrup
+8825494154945658220:
+  id: 49
+  name: flower soil/fertilizer
+8923366202181224350:
+  id: 119
+  name: cooking chocolate
+9183739233997070438:
+  id: 47
+  name: red/blush wine
+9202622840426010879:
+  id: 137
+  name: cocoa drinks
