@@ -13,7 +13,7 @@ def get_boundary_nodes(graph, m, n):
 
     return boundary_nodes
 
-def generate_random_supermarket(identifier, location):
+def generate_random_supermarket_graph(identifier, location):
     '''
     Function that generates a random supermarket given an id and location.
 
@@ -41,13 +41,7 @@ def generate_random_supermarket(identifier, location):
     aisle_attrs = {node: {"type": 'aisle'} for node in aisle_nodes}
     nx.set_node_attributes(graph, aisle_attrs)
 
-    sections = generate_sections(graph)
-
-    return {
-        "id": identifier,
-        "name": f"{random.sample(('Lidl', 'Kaufland'), 1)[0]} {location}",
-        "sections": sections
-    }, graph
+    return graph
 
 def generate_sections(graph):
     '''
@@ -70,3 +64,29 @@ def generate_sections(graph):
             sections[section_id] = section_dict
 
     return sections
+
+def create_supermarket(market_id):
+    '''
+    Function that creates a supermarket and returns the networkx object, sections and the super_market
+    '''
+
+    locations = ['Bayern', 'Baden-Württemberg', 'Nordrhein-Westfalen', 'Hessen', 'Sachsen',
+                 'Niedersachsen', 'Rheinland-Pfalz', 'Thüringen', 'Brandenburg', 'Sachsen-Anhalt',
+                 'Mecklenburg-Vorpommern', 'Schleswig-Holstein', 'Saarland', 'Bremen', 'Berlin',
+                 'Hamburg']
+
+    supermarkets = ['Lidl', 'Kaufland']
+
+    location = random.sample(locations, 1)[0]
+    graph = generate_random_supermarket_graph(market_id, location)
+
+    sections = generate_sections(graph)
+
+    super_market = {
+           "id": market_id,
+           "name": f"{random.sample(supermarkets, 1)[0]} {location}",
+           "sections": sections
+       }
+
+    return graph, sections, super_market
+
