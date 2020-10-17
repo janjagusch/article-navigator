@@ -1,4 +1,4 @@
-import os
+import yaml
 import json
 import random
 import pickle
@@ -99,11 +99,11 @@ def save_supermarket(market_id):
 
     graph, sections, super_market = create_supermarket(market_id)
 
-    with open('./supermarkets.yaml', 'w') as f:
-        f.write(json.dumps(super_market))
+    with open('../../app/data/supermarkets.yaml', 'w') as f:
+        f.write(yaml.dump(super_market, f))
 
-    with open('./supermarket_article_sections.yaml', 'w') as f:
-        f.write(json.dumps(sections))
+    with open('../../app/data/supermarket_article_sections.yaml', 'w') as f:
+        f.write(yaml.dump(sections, f))
 
-    with open('./graph.yaml', 'wb') as f:
+    with open('../../app/data/graph.yaml', 'wb') as f:
         f.write(pickle.dumps(graph))
