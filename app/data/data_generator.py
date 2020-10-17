@@ -77,33 +77,32 @@ def create_supermarket(market_id):
                  'Mecklenburg-Vorpommern', 'Schleswig-Holstein', 'Saarland', 'Bremen', 'Berlin',
                  'Hamburg']
 
-    supermarkets = ['Lidl', 'Kaufland']
+    brands = ['Lidl', 'Kaufland']
 
     location = random.sample(locations, 1)[0]
     graph = generate_random_supermarket_graph(market_id, location)
 
     sections = generate_sections(graph)
 
-    super_market = {
+    supermarket = {
            "id": market_id,
-           "name": f"{random.sample(supermarkets, 1)[0]} {location}",
+           "name": f"{random.sample(brands, 1)[0]} {location}",
            "sections": sections
        }
 
-    return graph, sections, super_market
+    return graph, sections, supermarket
 
 def save_supermarket(market_id):
     '''
     Function that saves a supermarket as a graph, its sections and its definition to file.
     '''
 
-    graph, sections, super_market = create_supermarket(market_id)
+    graph, sections, supermarket = create_supermarket(market_id)
 
-    with open('../../app/data/supermarkets.yaml', 'w') as f:
-        f.write(yaml.dump(super_market, f))
+    with open('./supermarkets.yaml', 'w') as f:
+        yaml.dump(supermarket, f)
 
-    with open('../../app/data/supermarket_article_sections.yaml', 'w') as f:
-        f.write(yaml.dump(sections, f))
-
-    with open('../../app/data/graph.yaml', 'wb') as f:
+    with open('./graph.pkl', 'wb') as f:
         f.write(pickle.dumps(graph))
+
+def generate_supermarket_articles():
