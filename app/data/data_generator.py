@@ -99,7 +99,7 @@ def save_supermarket(market_id):
 
     graph, sections, super_market = create_supermarket(market_id)
 
-    with open('./supermarkets.yaml'), 'w') as f:
+    with open('./supermarkets.yaml', 'w') as f:
         f.write(json.dumps(super_market))
 
     with open('./supermarket_article_sections.yaml', 'w') as f:
