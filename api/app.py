@@ -4,6 +4,8 @@ import logging
 import connexion
 from connexion import NoContent
 
+from api.validators import RequestBodyValidator
+
 SUPERMARKETS = {
     0: {
         "id": 0,
@@ -85,7 +87,12 @@ def get_supermarket_shortest_tour(supermarket_id, visit_sections):
 
 logging.basicConfig(level=logging.INFO)
 app = connexion.App(__name__)
-app.add_api("api.yml")
+app.add_api(
+    "api.yml",
+    strict_validation=True,
+    validate_responses=True,
+    validator_map={"body": RequestBodyValidator},
+)
 application = app.app
 
 if __name__ == "__main__":
