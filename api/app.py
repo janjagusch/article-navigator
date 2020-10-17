@@ -85,7 +85,7 @@ def get_supermarket_shortest_tour(supermarket_id, visit_sections):
 
 logging.basicConfig(level=logging.INFO)
 app = connexion.App(__name__)
-app.add_api("app.yml")
+app.add_api("api.yml")
 application = app.app
 
 if __name__ == "__main__":
