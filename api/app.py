@@ -30,6 +30,11 @@ ARTICLES = {
 SUPERMARKET_ARTICLE_SECTIONS = {0: {0: 0}}
 
 
+def health_check():
+    """ Check whether the API is healthy. """
+    return NoContent, 204
+
+
 def _format_supermarket(supermarket):
     return {
         "id": supermarket["id"],
@@ -86,7 +91,11 @@ def get_supermarket_shortest_tour(supermarket_id, visit_sections):
 
 
 logging.basicConfig(level=logging.INFO)
-app = connexion.App(__name__)
+app = connexion.App(
+    __name__,
+    options={"swagger_ui": True},
+)
+
 app.add_api(
     "api.yml",
     strict_validation=True,

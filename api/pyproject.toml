@@ -9,10 +9,10 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-connexion = "^2.7.0"
+connexion = {version = "^2.5", extras = ["swagger-ui"]}
 gevent = "^20.9.0"
 networkx = "^2.5"
-nx-concorde = { git = "https://github.com/janjagusch/nx-concorde.git", tag="0.1.0"}
+nx-concorde = { git = "https://github.com/janjagusch/nx-concorde.git", tag="0.2.0"}
 
 [tool.poetry.dev-dependencies]
 black = "^20.8b1"
