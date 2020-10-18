@@ -11,7 +11,15 @@ The project provides two features:
 
 The features are exposed through an [OpenAPI v3](https://swagger.io/specification/) API and made available in a [Docker](https://www.docker.com/) container.
 
-For end-users, we also developed an Android app.
+For end-users, we also developed an Android app. You can see a work in progress version here:
+
+![App Example](app.gif)
+
+## In-Shop Localization
+
+There exist [many approaches for indoor positioning](https://en.wikipedia.org/wiki/Indoor_positioning_system#Wireless_technologies), mostly using wireless technologies like Wi-Fi and Bluetooth. However, all approaches come with an expensive setup, that involves purchasing expensive hardware and hiring qualified staff to perform the roll-out. This makes existing systems unfeasible for a project, that would invovle tenthousands of stores.
+
+Instead, our approach requires no hardware and is easy to roll out: QR codes! We position QR at critical locations inside the store, each containing information about its location. The QR code could be positioned on a poster, explaining how to use this new feature.
 
 ## Documentation
 
