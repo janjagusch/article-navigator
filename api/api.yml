@@ -37,9 +37,15 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Supermarket"
+                type: object
+                properties:
+                  supermarkets:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Supermarket"
+                required:
+                  - supermarkets
+                additionalProperties: false
         400:
           description: Bad Request
           content:
@@ -89,9 +95,15 @@ paths:
           content:
             json/application:
               schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Article"
+                type: object
+                properties:
+                  articles:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Article"
+                required:
+                  - articles
+                additionalProperties: false
         400:
           description: Bad Request
           content:
@@ -165,9 +177,15 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Article"
+                type: object
+                properties:
+                  articles:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Article"
+                required:
+                  - articles
+                additionalProperties: false
         400:
           description: Bad Request
           content:
@@ -235,9 +253,15 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/SupermarketSection"
+                type: object
+                properties:
+                  sections:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/SupermarketSection"
+                required:
+                  - sections
+                additionalProperties: false
         400:
           description: Bad Request
           content:
@@ -270,9 +294,15 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/SupermarketSection"
+                type: object
+                properties:
+                  sections:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/SupermarketSection"
+                required:
+                  - sections
+                additionalProperties: false
         400:
           description: Bad Request
           content:

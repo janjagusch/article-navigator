@@ -22,13 +22,6 @@ COPY ./poetry.lock .
 RUN . $HOME/.poetry/env \
     && poetry install --no-dev
 
-FROM python:3.8.6-slim-buster
-
-WORKDIR /usr/src/app
-
-COPY --from=build-env /usr/local/bin/gunicorn /usr/local/bin/gunicorn
-COPY --from=build-env /usr/local/lib/python3.8/site-packages /usr/local/lib/python3.8/site-packages
-
 COPY . .
 
 EXPOSE 8080
