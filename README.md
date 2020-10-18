@@ -21,6 +21,8 @@ There exist [many approaches for indoor positioning](https://en.wikipedia.org/wi
 
 Instead, our approach requires no hardware and is easy to roll out: QR codes! We position QR at critical locations inside the store, each containing information about its location. The QR code could be positioned on a poster, explaining how to use this new feature.
 
+![QR Example](qr_example.png)
+
 ## Documentation
 
 For more information about the API microservice, check the [API README](./api/README.md).
