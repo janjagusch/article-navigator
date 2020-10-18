@@ -1,5 +1,5 @@
 from nx_concorde import calc_distance_matrix, calc_path_matrix, calc_tour
-
+import random
 
 def _graph_to_sections(graph):
     return {
@@ -11,14 +11,23 @@ def _graph_to_sections(graph):
         for key, data in graph.nodes().items()
     }
 
+def _graph_to_articles(graph):
+    return {
+        node_id: {
+            "id": node_info['article']['id'], ## NEEDS FIX?
+            "name": node_info['article']['name']
+        }
+    for node_id, node_info in graph.nodes().items() if node_info['type'] == 'aisle'
+    }
 
 class Supermarket:
     def __init__(
-        self, supermarket_id, name, sections, graph, path_matrix, distance_matrix
+        self, supermarket_id, name, sections, articles, graph, path_matrix, distance_matrix
     ):
         self._supermarket_id = supermarket_id
         self._name = name
         self._sections = sections
+        self._articles = articles
         self._graph = graph
         self._path_matrix = path_matrix
         self._distance_matrix = distance_matrix
@@ -32,6 +41,7 @@ class Supermarket:
     @classmethod
     def from_graph(cls, supermarket_id, name, graph, **kwargs):
         sections = _graph_to_sections(graph)
+        articles = _graph_to_articles(graph)
         path_matrix = calc_path_matrix(graph, **kwargs)
         distance_matrix = calc_distance_matrix(graph, path_matrix)
         return cls(
@@ -39,6 +49,7 @@ class Supermarket:
             name=name,
             graph=graph,
             sections=sections,
+            articles=articles,
             path_matrix=path_matrix,
             distance_matrix=distance_matrix,
         )
