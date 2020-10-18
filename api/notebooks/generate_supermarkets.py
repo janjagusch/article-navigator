@@ -29,20 +29,6 @@ from api.supermarket import Supermarket
 
 block_distance = functools.partial(minkowski, p=1)
 
-def add_article_to_graph(graph):
-
-    aisle_ids = [k for k,v in graph.nodes().items() if v['type'] == 'aisle']
-    with open('../articles.pkl', 'rb') as fp:
-        articles = pickle.load(fp)
-
-    random_articles = random.sample(list(articles), len(aisle_ids))
-
-    nx.set_node_attributes(graph, {node_id: {
-        "article" : articles[article_id]
-    } for node_id, article_id in zip(aisle_ids, random_articles)})
-
-    return graph
-
 def _generate_random_grid_graph(m=10, n=10, frac=0.7):
     '''
     Generates a random 2d grid graph of space (m, n) with a sample of frac nodes.
@@ -57,7 +43,7 @@ def _generate_random_grid_graph(m=10, n=10, frac=0.7):
     graph.nodes()[min(graph.nodes())]["type"] = "entrance"
     graph.nodes()[max(graph.nodes())]["type"] = "checkout"
 
-    return add_article_to_graph(graph)
+    return graph
 
 N_SUPERMARKETS = 20
 DIM_RANGE = range(8, 20)

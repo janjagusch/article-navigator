@@ -1,8 +1,10 @@
+import collections
 import datetime
 import logging
 import pickle
 
 import connexion
+import yaml
 from connexion import NoContent
 
 from api.validators import RequestBodyValidator
@@ -10,41 +12,16 @@ from api.validators import RequestBodyValidator
 with open("supermarkets.pkl", "rb") as file_pointer:
     SUPERMARKETS = pickle.load(file_pointer)
 
-# SUPERMARKETS = {
-#     0: {
-#         "id": 0,
-#         "name": "Test Supermarket",
-#         "sections": {
-#             0: {"id": 0, "type": "entrance", "location": {"x": 0, "y": 0}},
-#             1: {"id": 1, "type": "isle", "location": {"x": 0, "y": 1}},
-#             2: {"id": 2, "type": "isle", "location": {"x": 1, "y": 1}},
-#             3: {"id": 3, "type": "checkout", "location": {"x": 1, "y": 0}},
-#         },
-#     }
-# }
+with open("articles.yml", "r") as file_pointer:
+    ARTICLES = {article["id"]: article for article in yaml.safe_load(file_pointer)}
 
-ARTICLES = {
-    0: {
-        "id": 0,
-        "name": "Nutella",
-        "imageUrl": "https://commons.wikimedia.org/wiki/File:Nutella_ak.jpg#/media/File:Nutella_ak.jpg",
-    }
-}
-
-SUPERMARKET_ARTICLE_SECTIONS = {0: {0: 0}}
+with open("supermarket_article_sections.yml", "r") as file_pointer:
+    SUPERMARKET_ARTICLE_SECTIONS = yaml.safe_load(file_pointer)
 
 
 def health_check():
     """ Check whether the API is healthy. """
     return NoContent, 204
-
-
-# def _format_supermarket(supermarket):
-#     return {
-#         "id": supermarket["id"],
-#         "name": supermarket["name"],
-#         "sections": list(supermarket["sections"].values()),
-#     }
 
 
 def get_articles():
@@ -71,27 +48,26 @@ def get_supermarket_articles(supermarket_id):
 
 
 def get_supermarket_section(supermarket_id, section_id):
-    return SUPERMARKETS[supermarket_id].sections[section_id]
+    return SUPERMARKETS[supermarket_id]._sections[section_id]
 
 
 def get_supermarket_article_section(supermarket_id, article_id):
-    return SUPERMARKETS[supermarket_id].sections[
+    return SUPERMARKETS[supermarket_id]._sections[
         SUPERMARKET_ARTICLE_SECTIONS[supermarket_id][article_id]
     ]
 
 
 def get_supermarket_shortest_path(supermarket_id, from_section, to_section):
-    return [
-        SUPERMARKETS[supermarket_id].sections[section_id]
-        for section_id in [from_section, to_section]
-    ]
+    key = frozenset([from_section, to_section])
+    path = SUPERMARKETS[supermarket_id]._path_matrix[key]
+    if path[0] != from_section:
+        path = path[::-1]
+    return list(SUPERMARKETS[supermarket_id]._sections[sec_id] for sec_id in path)
 
 
 def get_supermarket_shortest_tour(supermarket_id, visit_sections):
-    return [
-        SUPERMARKETS[supermarket_id].sections[section_id]
-        for section_id in visit_sections
-    ]
+    tour = SUPERMARKETS[supermarket_id].calc_tour(visit_sections)
+    return list(SUPERMARKETS[supermarket_id]._sections[sec_id] for sec_id in tour)
 
 
 logging.basicConfig(level=logging.INFO)
