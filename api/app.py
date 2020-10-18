@@ -25,7 +25,7 @@ def health_check():
 
 
 def get_articles():
-    return list(ARTICLES.values())
+    return {"articles": list(ARTICLES.values())}
 
 
 def get_article(article_id):
@@ -33,7 +33,9 @@ def get_article(article_id):
 
 
 def get_supermarkets():
-    return [supermarket.to_dict() for supermarket in SUPERMARKETS.values()]
+    return {
+        "supermarkets": [supermarket.to_dict() for supermarket in SUPERMARKETS.values()]
+    }
 
 
 def get_supermarket(supermarket_id):
@@ -41,10 +43,12 @@ def get_supermarket(supermarket_id):
 
 
 def get_supermarket_articles(supermarket_id):
-    return [
-        ARTICLES[article_id]
-        for article_id in SUPERMARKET_ARTICLE_SECTIONS[supermarket_id].keys()
-    ]
+    return {
+        "articles": [
+            ARTICLES[article_id]
+            for article_id in SUPERMARKET_ARTICLE_SECTIONS[supermarket_id].keys()
+        ]
+    }
 
 
 def get_supermarket_section(supermarket_id, section_id):
@@ -62,12 +66,20 @@ def get_supermarket_shortest_path(supermarket_id, from_section, to_section):
     path = SUPERMARKETS[supermarket_id]._path_matrix[key]
     if path[0] != from_section:
         path = path[::-1]
-    return list(SUPERMARKETS[supermarket_id]._sections[sec_id] for sec_id in path)
+    return {
+        "sections": list(
+            SUPERMARKETS[supermarket_id]._sections[sec_id] for sec_id in path
+        )
+    }
 
 
 def get_supermarket_shortest_tour(supermarket_id, visit_sections):
     tour = SUPERMARKETS[supermarket_id].calc_tour(visit_sections)
-    return list(SUPERMARKETS[supermarket_id]._sections[sec_id] for sec_id in tour)
+    return {
+        "sections": list(
+            SUPERMARKETS[supermarket_id]._sections[sec_id] for sec_id in tour
+        )
+    }
 
 
 logging.basicConfig(level=logging.INFO)
