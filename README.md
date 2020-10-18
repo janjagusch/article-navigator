@@ -9,7 +9,11 @@ The project provides two features:
 * We can calculate the shortest path between any two items, using the [A* search algorithm](https://en.wikipedia.org/wiki/A*_search_algorithm).
 * We can calculate the shortest tour from entrance to checkout that passes all items on your shopping list, using the [Concorde TSP solver](http://www.math.uwaterloo.ca/tsp/concorde.html).
 
+## API
+
 The features are exposed through an [OpenAPI v3](https://swagger.io/specification/) API and made available in a [Docker](https://www.docker.com/) container.
+
+![OpenAPI example](open_api_example.png)
 
 ## App
 
