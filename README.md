@@ -11,6 +11,8 @@ The project provides two features:
 
 The features are exposed through an [OpenAPI v3](https://swagger.io/specification/) API and made available in a [Docker](https://www.docker.com/) container.
 
+## App
+
 For end-users, we also developed an Android app. You can see a work in progress version here:
 
 ![App Example](app.gif)
