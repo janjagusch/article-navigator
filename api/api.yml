@@ -15,13 +15,24 @@ servers:
         enum:
           - v1
 paths:
+  /health_check:
+    get:
+      summary: Checks whether the API is healthy.
+      tags:
+        - health
+      operationId: app.health_check
+      responses:
+        204:
+          description: "The API is healthy"
+        500:
+          description: "The API is not healthy"
   /supermarkets:
     get:
       summary: "Lists all supermarkets"
       description: "Returns an array of supermarkets"
       operationId: "app.get_supermarkets"
       responses:
-        "200":
+        200:
           description: "Successful operation"
           content:
             application/json:
@@ -29,6 +40,12 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Supermarket"
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BadRequest"
   /supermarkets/{supermarket_id}:
     get:
       summary: "Finds supermarket"
@@ -42,12 +59,18 @@ paths:
           schema:
             type: "integer"
       responses:
-        "200":
+        200:
           description: "Successful operation"
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Supermarket"
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BadRequest"
   /supermarkets/{supermarket_id}/articles:
     get:
       summary: "Finds all articles in supermarket"
@@ -61,7 +84,7 @@ paths:
           schema:
             type: "integer"
       responses:
-        "200":
+        200:
           description: "Successful operation"
           content:
             json/application:
@@ -69,6 +92,12 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Article"
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BadRequest"
   /supermarkets/{supermarket_id}/sections/{section_id}:
     get:
       summary: "Finds a section in a supermarket"
@@ -88,12 +117,18 @@ paths:
           schema:
             type: "integer"
       responses:
-        "200":
+        200:
           description: "Successful operation"
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/SupermarketSection"
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BadRequest"
   /articles/{article_id}:
     get:
       summary: "Finds article"
@@ -107,19 +142,25 @@ paths:
           schema:
             type: "integer"
       responses:
-        "200":
+        200:
           description: "Successful operation"
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Article"
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BadRequest"
   /articles:
     get:
       summary: "Lists all articles"
       description: "Returns an array of articles"
       operationId: "app.get_articles"
       responses:
-        "200":
+        200:
           description: "Successful operation"
           content:
             application/json:
@@ -127,6 +168,12 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Article"
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BadRequest"
   /supermarkets/{supermarket_id}/articles/{article_id}/section:
     get:
       summary: "Find section of article in supermarket"
@@ -146,12 +193,18 @@ paths:
           schema:
             type: "integer"
       responses:
-        "200":
+        200:
           description: "Successful operation"
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/SupermarketSection"
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BadRequest"
   /supermarkets/{supermarket_id}/shortest_path:
     get:
       summary: "Finds the shortest path between sections in a supermarket"
@@ -177,7 +230,7 @@ paths:
           schema:
             type: "integer"
       responses:
-        "200":
+        200:
           description: "Successful operation"
           content:
             application/json:
@@ -185,6 +238,12 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/SupermarketSection"
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BadRequest"
   /supermarkets/{supermarket_id}/shortest_tour:
     get:
       summary: "Finds the shortest tour to visit selected sections in a supermarket"
@@ -206,7 +265,7 @@ paths:
             items:
               type: "integer"
       responses:
-        "200":
+        200:
           description: "Successful operation"
           content:
             application/json:
@@ -214,8 +273,21 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/SupermarketSection"
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BadRequest"
 components:
   schemas:
+    BadRequest:
+      type: object
+      required:
+        - error
+      properties:
+        error:
+          type: string
     SupermarketSection:
       type: "object"
       required:
@@ -238,7 +310,7 @@ components:
               type: integer
         type:
           type: "string"
-          enum: ["entrance", "isle", "checkout"]
+          enum: ["entrance", "aisle", "checkout"]
     Supermarket:
       type: "object"
       required:
