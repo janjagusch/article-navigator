@@ -35,6 +35,10 @@ As part of this hackathon, we developed the [nx-concorde](https://github.com/jan
 
 ![nx-concorde example](nx_concorde_example.png)
 
+## Recommender System
+
+Since our approach is API first, it would be simple to add additional logic to the navigation system, for example a recommender system for products that are already on the customers fastest path. This way we can systematically increase sales.
+
 ## Documentation
 
 For more information about the API microservice, check the [API README](./api/README.md).
