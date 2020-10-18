@@ -7,6 +7,7 @@ import connexion
 import yaml
 from connexion import NoContent
 
+from api.supermarket import Supermarket
 from api.validators import RequestBodyValidator
 
 with open("supermarkets.pkl", "rb") as file_pointer:
