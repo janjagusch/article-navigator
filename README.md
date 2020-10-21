@@ -33,6 +33,8 @@ Instead, our approach requires no hardware and is easy to roll out: QR codes! We
 
 As part of this hackathon, we developed the [nx-concorde](https://github.com/janjagusch/nx-concorde) package, a Python package for solving the Travelling Salesperson Problem (TSP) for graphs. We found it very useful, so we decided to make it open source.
 
+**Disclaimer**: The work on this package started prior to the hackathon weekend, as you can see in the [commit history](https://github.com/janjagusch/nx-concorde/commits/main). Building a package like this over a single weekend surely wouldn't have been possible for us. We don't want to make our results seem more impressive than what we actually accomplished. This would be unfair towards the other participating teams and was also never intended this way. 🌈
+
 ![nx-concorde example](nx_concorde_example.png)
 
 ## Recommender System
